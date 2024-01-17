@@ -7,13 +7,13 @@ namespace aplikacja_wykresy
 {
     public partial class App : Application
     {
+        public static List<GraphElement> Elements = new List<GraphElement>();
         public App()
         {
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
 
-            List<GraphElement> elements = new List<GraphElement>();
         }
 
         protected override void OnStart()

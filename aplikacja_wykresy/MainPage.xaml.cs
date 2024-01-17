@@ -21,5 +21,10 @@ namespace aplikacja_wykresy
         {
             await Navigation.PushAsync(new DataPage());
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+        }
     }
 }

@@ -18,7 +18,7 @@ namespace aplikacja_wykresy
             InitializeComponent();
         }
 
-        private void ChangeData_Clicked(object sender, EventArgs e)
+        private async void ChangeData_Clicked(object sender, EventArgs e)
         {
             for(int i = 0; i < 7; ++i)
             {
@@ -35,6 +35,8 @@ namespace aplikacja_wykresy
                     }
                 }
             }
+            App.Elements = elements;
+            await Navigation.PopToRootAsync();
         }
     }
 }
