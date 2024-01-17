@@ -10,7 +10,7 @@ namespace aplikacja_wykresy
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new DataPage();
         }
 
         protected override void OnStart()
