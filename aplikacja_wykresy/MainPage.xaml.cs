@@ -16,5 +16,10 @@ namespace aplikacja_wykresy
         {
             InitializeComponent();
         }
+
+        private async void ChangeData_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DataPage());
+        }
     }
 }
