@@ -12,6 +12,12 @@ namespace aplikacja_wykresy
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : TabbedPage
     {
+        List<Color> colors=new List<Color>() { 
+            Color.Green, Color.Blue,
+            Color.Red, Color.Magenta,
+            Color.Yellow,Color.Orange,
+            Color.PaleGreen, Color.Purple,
+        };
         public MainPage()
         {
             InitializeComponent();
@@ -42,9 +48,16 @@ namespace aplikacja_wykresy
                 StackLayout graphElement = new StackLayout()
                 {
                     HeightRequest = App.Elements[i].Value/maxValue*500,
-                    BackgroundColor = Color.Red,
+                    BackgroundColor = colors[i],
                     VerticalOptions = LayoutOptions.End,
                 };
+                graphElement.Children.Add(new Label()
+                {
+                    Text = App.Elements[i].Value.ToString(),
+                    VerticalOptions = LayoutOptions.Start,
+                    TextColor=Color.White,
+                    HorizontalTextAlignment=TextAlignment.Center,
+                });
                 container.Children.Add(graphElement);
                 container.Children.Add(new Label()
                 {
