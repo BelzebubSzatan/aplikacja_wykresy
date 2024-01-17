@@ -12,9 +12,29 @@ namespace aplikacja_wykresy
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DataPage : ContentPage
     {
+        List<GraphElement> elements=new List<GraphElement>();
         public DataPage()
         {
             InitializeComponent();
+        }
+
+        private void ChangeData_Clicked(object sender, EventArgs e)
+        {
+            for(int i = 0; i < 7; ++i)
+            {
+                List<Entry> entries=DataGrid.Children.OfType<Entry>().Where(z=>z.ClassId==i.ToString()).ToList();
+                if (entries.Count == 2)
+                {
+                    if (entries[0].Text !=null && entries[1].Text !=null)
+                    {
+                        elements.Add(new GraphElement()
+                        {
+                            Name = entries[0].Text,
+                            Value = double.Parse(entries[1].Text)
+                        });
+                    }
+                }
+            }
         }
     }
 }

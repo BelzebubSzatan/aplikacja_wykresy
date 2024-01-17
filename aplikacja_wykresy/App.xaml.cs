@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,6 +12,8 @@ namespace aplikacja_wykresy
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
+
+            List<GraphElement> elements = new List<GraphElement>();
         }
 
         protected override void OnStart()
