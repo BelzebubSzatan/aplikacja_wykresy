@@ -25,6 +25,36 @@ namespace aplikacja_wykresy
         {
             base.OnAppearing();
 
+            if (App.Elements.Count == 0) return;
+
+            foreach (var item in App.Elements)
+                BarGraph.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(1, GridUnitType.Star) });
+
+            double maxValue=App.Elements.Max(x => x.Value);
+
+            for (int i = 0; i < App.Elements.Count; i++)
+            {
+                StackLayout container = new StackLayout();
+                container.Orientation = StackOrientation.Vertical;
+                container.VerticalOptions = LayoutOptions.End;
+                StackLayout graphElement = new StackLayout()
+                {
+                    HeightRequest = App.Elements[i].Value/maxValue*500,
+                    BackgroundColor = Color.Red,
+                    VerticalOptions = LayoutOptions.End,
+                };
+                container.Children.Add(graphElement);
+                container.Children.Add(new Label()
+                {
+                    Text = App.Elements[i].Name,
+                    FontSize = 20,
+                    TextColor = Color.Black,
+                    HorizontalTextAlignment=TextAlignment.Center,
+                });
+                Grid.SetColumn(container,i);
+                BarGraph.Children.Add(container);
+            }
+
         }
     }
 }

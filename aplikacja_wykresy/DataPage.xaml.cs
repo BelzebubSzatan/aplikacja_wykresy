@@ -20,6 +20,7 @@ namespace aplikacja_wykresy
 
         private async void ChangeData_Clicked(object sender, EventArgs e)
         {
+            App.Elements.Clear();
             for(int i = 0; i < 7; ++i)
             {
                 List<Entry> entries=DataGrid.Children.OfType<Entry>().Where(z=>z.ClassId==i.ToString()).ToList();
@@ -30,7 +31,7 @@ namespace aplikacja_wykresy
                         elements.Add(new GraphElement()
                         {
                             Name = entries[0].Text,
-                            Value = double.Parse(entries[1].Text)
+                            Value = double.Parse(entries[1].Text),
                         });
                     }
                 }

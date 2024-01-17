@@ -8,6 +8,8 @@
         <ContentPage.ToolbarItems>
             <ToolbarItem Text="Zmien dane" x:Name="ChangeData" Clicked="ChangeData_Clicked"/>
         </ContentPage.ToolbarItems>
+        <Grid x:Name="BarGraph" HeightRequest="500">
+        </Grid>
     </ContentPage>
     <ContentPage Title="Wykres kolowy">
         
