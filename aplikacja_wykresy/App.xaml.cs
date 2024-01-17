@@ -8,6 +8,7 @@ namespace aplikacja_wykresy
     public partial class App : Application
     {
         public static List<GraphElement> Elements = new List<GraphElement>();
+        public static string Name = "";
         public App()
         {
             InitializeComponent();

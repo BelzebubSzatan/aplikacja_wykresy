@@ -10,14 +10,16 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+
             </Grid.RowDefinitions>
             <!--Names-->
             <Entry Placeholder="nazwa" VerticalTextAlignment="Center" VerticalOptions="Center" Margin="5" Grid.Column="0" Grid.Row="0" ClassId="0"/>
@@ -35,8 +37,11 @@
             <Entry Placeholder="nazwa" VerticalTextAlignment="Center" VerticalOptions="Center" Margin="5" Grid.Column="1" Grid.Row="4" ClassId="4"/>
             <Entry Placeholder="nazwa" VerticalTextAlignment="Center" VerticalOptions="Center" Margin="5" Grid.Column="1" Grid.Row="5" ClassId="5"/>
             <Entry Placeholder="nazwa" VerticalTextAlignment="Center" VerticalOptions="Center" Margin="5" Grid.Column="1" Grid.Row="6" ClassId="6"/>
+
+            <!--Graph Name-->
+            <Entry Placeholder="nazwa" VerticalTextAlignment="Center" VerticalOptions="Center" Margin="5" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2" x:Name="GraphName"/>
             <!--Button-->
-            <Button BackgroundColor="Purple" TextColor="White" Text="Zatwierdz" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="7" HeightRequest="50" CornerRadius="10" WidthRequest="100" Margin="20,20"
+            <Button BackgroundColor="Purple" TextColor="White" Text="Zatwierdz" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="8" CornerRadius="10" WidthRequest="100"  HeightRequest="50"
                     x:Name="ChangeData" Clicked="ChangeData_Clicked"/>
         </Grid>
     </ContentPage.Content>

@@ -17,7 +17,10 @@ namespace aplikacja_wykresy
         {
             InitializeComponent();
         }
-
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+        }
         private async void ChangeData_Clicked(object sender, EventArgs e)
         {
             App.Elements.Clear();
@@ -37,6 +40,7 @@ namespace aplikacja_wykresy
                 }
             }
             App.Elements = elements;
+            App.Name = GraphName.Text ?? "Sample name";
             await Navigation.PopToRootAsync();
         }
     }

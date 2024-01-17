@@ -27,7 +27,9 @@ namespace aplikacja_wykresy
 
             if (App.Elements.Count == 0) return;
 
-            foreach (var item in App.Elements)
+            Name.Text = App.Name;
+
+            for(int i=0;i<App.Elements.Count;++i)
                 BarGraph.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(1, GridUnitType.Star) });
 
             double maxValue=App.Elements.Max(x => x.Value);
