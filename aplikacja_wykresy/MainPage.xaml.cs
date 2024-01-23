@@ -36,13 +36,11 @@ namespace aplikacja_wykresy
             Name.Text = App.Name;
             BarGraph.ColumnDefinitions.Clear();
 
-            for (int i = 0; i < App.Elements.Count; ++i)
-                BarGraph.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(1, GridUnitType.Star) });
-
             double maxValue = App.Elements.Max(x => x.Value);
 
             for (int i = 0; i < App.Elements.Count; i++)
             {
+                BarGraph.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(1, GridUnitType.Star) });
                 StackLayout container = new StackLayout();
                 container.Orientation = StackOrientation.Vertical;
                 container.VerticalOptions = LayoutOptions.End;

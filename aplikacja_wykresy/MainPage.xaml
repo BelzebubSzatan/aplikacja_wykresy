@@ -9,9 +9,8 @@
             <ToolbarItem Text="Zmien dane" x:Name="ChangeData" Clicked="ChangeData_Clicked"/>
         </ContentPage.ToolbarItems>
         <Grid>
-            <Label x:Name="Name" HorizontalOptions="Center" Margin="10"/>
-            <Grid x:Name="BarGraph" HeightRequest="500">
-            </Grid>
+            <Label x:Name="Name" HorizontalOptions="Center" Text="Sample Name" Margin="10" TextColor="Black" FontSize="20"/>
+            <Grid x:Name="BarGraph" HeightRequest="500"/>
         </Grid>
     </ContentPage>
     <ContentPage Title="Wykres kolowy">
